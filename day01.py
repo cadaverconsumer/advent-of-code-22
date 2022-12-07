@@ -13,7 +13,7 @@ Find the Elf carrying the most Calories. How many total Calories is that Elf car
 
 import fileinput
 
-all_inventories = fileinput.input(files ='day01-input.txt')
+all_inventories = open('day01-input.txt').read()
 sums = []
 
 inventories_list = all_inventories.split('\n'*2)
