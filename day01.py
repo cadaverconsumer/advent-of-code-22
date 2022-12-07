@@ -20,8 +20,8 @@ inventories_list = all_inventories.split('\n'*2)
 for i in inventories_list:
   individual = i.split('\n')
   calories = [float(n) for n in individual] # now have list of calories for each individual elf
-  sums.append(calories.sum())
-  
-print(sums.max())
-  
-    
+  sums.append(sum(calories))
+
+sums.sort(reverse=True)
+topthree = sum(sums[0:3])
+print(topthree)
